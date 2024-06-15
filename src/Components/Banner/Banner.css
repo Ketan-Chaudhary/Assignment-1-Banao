@@ -1,0 +1,27 @@
+.b-wrapper {
+    height: 440px;
+    width: 100%;
+    background: url("banner.png"), #000000a0;
+    background-blend-mode: multiply;
+    display: flex;
+    flex-direction: column;
+}
+
+.b-wrapper>span {
+    color: #FFFFFF;
+    position: relative;
+    top: 286px;
+    left: 200px;
+    width: 435px;
+
+}
+
+.text-b {
+    font-weight: bold;
+    font-size: 36px;
+    word-spacing: 0.5rem;
+}
+
+.text-b-s {
+    font-size: 18px;
+}
