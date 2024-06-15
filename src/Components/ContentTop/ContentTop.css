@@ -1,0 +1,9 @@
+.top-wrapper {
+    display: flex;
+    /* background-color: red; */
+}
+
+.top-ctn {
+    right: 200px;
+    top: 575px;
+}

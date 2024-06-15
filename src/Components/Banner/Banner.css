@@ -5,6 +5,7 @@
     background-blend-mode: multiply;
     display: flex;
     flex-direction: column;
+    margin-top: 2rem;
 }
 
 .b-wrapper>span {
