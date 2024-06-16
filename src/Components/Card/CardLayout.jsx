@@ -9,31 +9,45 @@ import {
   Heading,
   Divider,
   Text,
+  Flex,
 } from "@chakra-ui/react";
+
+import { Avatar, AvatarBadge, AvatarGroup } from "@chakra-ui/react";
 
 const CardLayout = () => {
   return (
-    <Card maxW="sm">
+    <Card>
       <CardBody>
         <Image
-          src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+          src="card.png"
           alt="Green double couch with wooden legs"
           borderRadius="lg"
+          w="695px"
+          h="220px"
         />
         <Stack mt="6" spacing="3">
+          <Text> Type </Text>
           <Heading size="md">Living room Sofa</Heading>
           <Text>
             This sofa is perfect for modern tropical spaces, baroque inspired
             spaces, earthy toned spaces and for people who love a chic design
             with a sprinkle of vintage design.
           </Text>
-          <Text color="blue.600" fontSize="2xl">
-            $450
-          </Text>
         </Stack>
       </CardBody>
       <Divider />
-      <CardFooter></CardFooter>
+      <CardFooter>
+        <Flex>
+          <Flex>
+            <Avatar name="Dan Abrahmov" src="https://bit.ly/dan-abramov" />
+            <Text>Name</Text>
+          </Flex>
+          <Flex>
+            <Text>Views</Text>
+            <button>share</button>
+          </Flex>
+        </Flex>
+      </CardFooter>
     </Card>
   );
 };
