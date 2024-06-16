@@ -53,6 +53,7 @@ import { IoIosSearch } from "react-icons/io";
 import { RiArrowDownSFill } from "react-icons/ri";
 import Signup from "../Authentication/Signup";
 import { Avatar, AvatarBadge, AvatarGroup } from "@chakra-ui/react";
+import Content from "../Content/Content";
 
 const Navbar = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -63,10 +64,11 @@ const Navbar = () => {
 
   const handleLogout = () => {
     setIsAuthenticated(false);
+    window.localStorage.setItem("NotAuthenticated", true);
   };
 
   return (
-    <section className="innerWidth nav-wrapper">
+    <section className="innerWidth nav-wrapper hidden lg:block  sm:m-0">
       <div className="nav-container">
         <div className="nav-left">
           <img src="/logo.png" alt="ATG World Logo" />
@@ -100,6 +102,7 @@ const Navbar = () => {
               <span>
                 <RiArrowDownSFill />
               </span>
+              {window.localStorage.setItem("NotAuthenticated", false)}
             </button>
           ) : (
             <>

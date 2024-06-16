@@ -1,7 +1,7 @@
 import React from "react";
 import ContentTop from "../ContentTop/ContentTop";
 
-const Content = () => {
+const Content = ({ setIsAuthenticated }) => {
   return (
     <section className="ctn-wrapper">
       <div className="ctn-container">
