@@ -10,44 +10,100 @@ import {
   Divider,
   Text,
   Flex,
+  HStack,
+  Icon,
 } from "@chakra-ui/react";
-
+import { MdOutlineVisibility } from "react-icons/md";
+import { FaShareAlt } from "react-icons/fa";
+import { GrMore } from "react-icons/gr";
 import { Avatar, AvatarBadge, AvatarGroup } from "@chakra-ui/react";
 
-const CardLayout = () => {
+const CardLayout = ({ card }) => {
   return (
-    <Card>
-      <CardBody>
+    <Card
+      className="shadow-md "
+      style={{
+        border: "1px solid #E2E8F0",
+      }}
+    >
+      <CardBody w="43rem" p={0}>
         <Image
           src="card.png"
-          alt="Green double couch with wooden legs"
-          borderRadius="lg"
-          w="695px"
-          h="220px"
+          alt="card image"
+          w="full"
+          h="13rem"
+          objectFit="cover"
         />
-        <Stack mt="6" spacing="3">
-          <Text> Type </Text>
-          <Heading size="md">Living room Sofa</Heading>
-          <Text>
-            This sofa is perfect for modern tropical spaces, baroque inspired
-            spaces, earthy toned spaces and for people who love a chic design
-            with a sprinkle of vintage design.
+        <Stack
+          spacing="3"
+          style={{
+            padding: "1.25rem",
+          }}
+        >
+          <HStack>
+            <img src={card.icon} alt="Icon" />
+            <Text fontSize="18px" fontWeight="500">
+              {card.type}{" "}
+            </Text>
+          </HStack>
+          <HStack gap="1.5rem">
+            <Heading w="37.5rem" fontSize="22px">
+              {card.title}{" "}
+            </Heading>
+            <div className="dropdown dropdown-end">
+              <div tabIndex={0} role="button" className=" m-1">
+                <GrMore />
+              </div>
+              <ul
+                tabIndex={0}
+                className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
+              >
+                <li>
+                  <a>Item 1</a>
+                </li>
+                <li>
+                  <a>Item 2</a>
+                </li>
+              </ul>
+            </div>
+          </HStack>
+          <Text color="#5C5C5C" fontSize="17px">
+            {card.description}
           </Text>
         </Stack>
       </CardBody>
-      <Divider />
       <CardFooter>
-        <Flex>
-          <Flex>
-            <Avatar name="Dan Abrahmov" src="https://bit.ly/dan-abramov" />
-            <Text>Name</Text>
-          </Flex>
-          <Flex>
-            <Text>Views</Text>
-            <button>share</button>
-          </Flex>
-        </Flex>
+        <HStack className="flex flex-wrap justify-between w-full">
+          <HStack>
+            <Avatar name={card.author.name} src={card.author.avatar} />
+            <Text
+              style={{
+                fontWeight: "semibold",
+                fontSize: "18px",
+              }}
+            >
+              {" "}
+              {card.author.name}{" "}
+            </Text>
+          </HStack>
+          <HStack gap="2.5rem">
+            <Text
+              style={{
+                fontSize: "14px",
+                color: "#525252",
+              }}
+            >
+              {" "}
+              <Icon as={MdOutlineVisibility} /> {card.views}{" "}
+            </Text>
+            <button className="btn btn-square btn-sm ">
+              {" "}
+              <FaShareAlt />{" "}
+            </button>
+          </HStack>
+        </HStack>
       </CardFooter>
+      <Divider />
     </Card>
   );
 };

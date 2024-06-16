@@ -12,7 +12,6 @@ import {
   Text,
   Button,
 } from "@chakra-ui/react";
-import "./ContentTop.css";
 import { FaLocationDot } from "react-icons/fa6";
 import { Divider } from "@chakra-ui/react";
 import { MdErrorOutline } from "react-icons/md";
