@@ -2,6 +2,7 @@ import React from "react";
 import "./Navbar.css";
 import { IoIosSearch } from "react-icons/io";
 import { RiArrowDownSFill } from "react-icons/ri";
+import Login from "../Authentication/Login";
 
 const Navbar = () => {
   return (
@@ -28,9 +29,12 @@ const Navbar = () => {
           <span>Create account. </span>
           <span className="cursor-pointer">
             {" "}
-            <a href="" className="">
+            <button
+              onClick={() => document.getElementById("my_modal_1").showModal()}
+            >
               It’s free!{" "}
-            </a>{" "}
+            </button>{" "}
+            <Login />
           </span>
           <span>
             <RiArrowDownSFill />
