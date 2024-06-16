@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
+import { useToast } from "@chakra-ui/react";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const toast = useToast();
   return (
     <section>
-      <dialog id="my_modal_1" className="modal ">
+      <dialog id="my_modal_5" className="modal ">
         <div className="modal-box bg-transparent max-w-5xl shadow-none justify-center flex">
           <div className="modal-action">
             <form method="dialog" className="bg-black">
@@ -14,7 +16,7 @@ const Login = () => {
                 ✕
               </button>
             </form>
-            <div className="bg-white w-[46rem] h-[28.6rem] rounded-xl">
+            <div className="bg-white w-[46rem] h-[30.6rem] rounded-xl">
               <div className="bg-[#EFFFF4]  text-[#008A45] w-[46rem] h-[3.2rem] topMdl text-center m-auto text-[14px] rounded-xl items-center flex justify-center">
                 {" "}
                 Let's learn, share & inspire each other with our passion for
@@ -43,7 +45,20 @@ const Login = () => {
                       </button>
                     </label>
 
-                    <button className="btn rounded-[20px] w-full mt-[1.18rem] bg-[#2F6CE5] text-white text-[14px] font-semibold hover:bg-[#ffff] hover:text-[#2F6CE5] duration-400 ease-in ">
+                    <button
+                      className="btn rounded-[20px] w-full mt-[1.18rem] bg-[#2F6CE5] text-white text-[14px] font-semibold hover:bg-[#ffff] hover:text-[#2F6CE5] duration-400 ease-in "
+                      onClick={() => {
+                        toast({
+                          title: "Server Didn't Respond",
+                          description: "Sorry for the inconvience caused",
+                          status: "error",
+                          position: "top",
+                          duration: 5000,
+                          isClosable: false,
+                        });
+                        document.getElementById("my_modal_5").close();
+                      }}
+                    >
                       Sign In
                     </button>
 
@@ -65,6 +80,10 @@ const Login = () => {
                       {" "}
                       <img src="google.png" alt="" /> Sign In with Google
                     </button>
+
+                    <div className="flex justify-center items-center mt-[1.5rem] gap-[10px] text-[14px] font-thin">
+                      Forgot Password?
+                    </div>
                   </div>
                 </div>
                 <div className="flex flex-col mr-[2.25rem] mt-[1.93rem] gap-[1.94rem] left-modal">
@@ -72,7 +91,15 @@ const Login = () => {
                     <span className="text-[#3D3D3D]">
                       Don’t have an account yet?
                     </span>{" "}
-                    <span className="text-[#2F6CE5]">Create new for free!</span>{" "}
+                    <button
+                      onClick={() => {
+                        document.getElementById("my_modal_5").close();
+                        document.getElementById("my_modal_1").showModal();
+                      }}
+                      className="text-[#2F6CE5]"
+                    >
+                      Create new for free!
+                    </button>{" "}
                   </span>
                   <img src="signin.png" alt="" />
                 </div>
