@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Tabs,
   TabList,
@@ -18,9 +18,19 @@ import { MdErrorOutline } from "react-icons/md";
 import PostCard from "../PostCard/PostCard";
 import { RiArrowDownSFill } from "react-icons/ri";
 import { MdOutlineGroupAdd } from "react-icons/md";
+import cardData from "../../assets/cardData.json";
 
 const ContentTop = () => {
   const tabName = ["All Post(32)", "Article", "Events", "Education", "Job"];
+  const [selectedTab, setSelectedTab] = useState();
+
+  const filterCardData = (tab) => {
+    if (tab === "All Post(32)") {
+      return cardData;
+    }
+    return cardData.filter((card) => card.type === tab);
+  };
+
   return (
     <section
       className="top-wrapper flex  "
@@ -34,9 +44,12 @@ const ContentTop = () => {
           maxWidth: "44rem",
         }}
       >
-        <Tabs variant="line">
+        <Tabs
+          variant="line"
+          onChange={(index) => setSelectedTab(tabName[index])}
+        >
           <TabList>
-            {tabName.map((tab) => (
+            {tabName.map((tab, index) => (
               <Tab
                 _selected={{
                   color: "black",
@@ -45,18 +58,19 @@ const ContentTop = () => {
                 color="#8A8A8A"
                 fontSize="sm"
                 p={3}
-                key={tab}
+                key={index}
               >
                 {tab}{" "}
               </Tab>
             ))}
           </TabList>
+
           <TabPanels>
-            <TabPanel>
-              {" "}
-              <PostCard />{" "}
-            </TabPanel>
-            <TabPanel>Working</TabPanel>
+            {tabName.map((tab, index) => (
+              <TabPanel key={index}>
+                <PostCard cardData={filterCardData(tab)} />
+              </TabPanel>
+            ))}
           </TabPanels>
         </Tabs>
       </div>

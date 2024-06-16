@@ -1,59 +1,64 @@
 [
-
-{
-    "type": "Article",
-    "icon": "Article.png",
-    "title": "Tax Benefits for Investment under National Pension Scheme launched by Government",
-    "description": "I’ve worked in UX for the better part of a decade. From now on, I plan to rei...",
-    "author": {
-      "name": "Sarthak Kamra",
-      "avatar": "https://bit.ly/dan-abramov"
+    {
+      "id": 1,
+      "type": "Article",
+      "icon": "Article.png",
+      "title": "Tax Benefits for Investment under National Pension Scheme launched by Government",
+      "description": "I’ve worked in UX for the better part of a decade. From now on, I plan to rei...",
+      "author": {
+        "name": "Sarthak Kamra",
+        "avatar": "https://bit.ly/dan-abramov"
+      },
+      "views": "1.4k views",
+      "image": "URL_to_image"
     },
-    "views": "1.4k views",
-    "image": "URL_to_image"
-  },
-  {
-    "type": "Article",
-    "title": "What if famous brands had regular fonts? Meet RegulaBrands!",
-    "description": "I’ve worked in UX for the better part of a decade. From now on, I plan to rei...",
-    "author": {
-      "name": "Sarthak Kamra",
-      "avatar": "https://bit.ly/dan-abramov"
+    {
+      "id": 2,
+      "type": "Article",
+      "title": "What if famous brands had regular fonts? Meet RegulaBrands!",
+      "description": "I’ve worked in UX for the better part of a decade. From now on, I plan to rei...",
+      "author": {
+        "name": "Sarthak Kamra",
+        "avatar": "https://bit.ly/dan-abramov"
+      },
+      "views": "1.4k views",
+      "image": "URL_to_image"
     },
-    "views": "1.4k views",
-    "image": "URL_to_image"
-  },
-  {
-    "type": "Article",
-    "title": "What if famous brands had regular fonts? Meet RegulaBrands!",
-    "description": "I’ve worked in UX for the better part of a decade. From now on, I plan to rei...",
-    "author": {
-      "name": "Sarthak Kamra",
-      "avatar": "https://bit.ly/dan-abramov"
+    {
+      "id": 3,
+      "type": "Article",
+      "title": "What if famous brands had regular fonts? Meet RegulaBrands!",
+      "description": "I’ve worked in UX for the better part of a decade. From now on, I plan to rei...",
+      "author": {
+        "name": "Sarthak Kamra",
+        "avatar": "https://bit.ly/dan-abramov"
+      },
+      "views": "1.4k views",
+      "image": "URL_to_image"
     },
-    "views": "1.4k views",
-    "image": "URL_to_image"
-  },
-  {
-    "type": "Article",
-    "title": "What if famous brands had regular fonts? Meet RegulaBrands!",
-    "description": "I’ve worked in UX for the better part of a decade. From now on, I plan to rei...",
-    "author": {
-      "name": "Sarthak Kamra",
-      "avatar": "https://bit.ly/dan-abramov"
+    {
+      "id": 4,
+      "type": "Article",
+      "title": "What if famous brands had regular fonts? Meet RegulaBrands!",
+      "description": "I’ve worked in UX for the better part of a decade. From now on, I plan to rei...",
+      "author": {
+        "name": "Sarthak Kamra",
+        "avatar": "https://bit.ly/dan-abramov"
+      },
+      "views": "1.4k views",
+      "image": "URL_to_image"
     },
-    "views": "1.4k views",
-    "image": "URL_to_image"
-  },
-  {
-    "type": "Article",
-    "title": "What if famous brands had regular fonts? Meet RegulaBrands!",
-    "description": "I’ve worked in UX for the better part of a decade. From now on, I plan to rei...",
-    "author": {
-      "name": "Sarthak Kamra",
-      "avatar": "https://bit.ly/dan-abramov"
-    },
-    "views": "1.4k views",
-    "image": "URL_to_image"
-  }
-]
+    {
+      "id": 5,
+      "type": "Events",
+      "title": "What if famous brands had regular fonts? Meet RegulaBrands!",
+      "description": "I’ve worked in UX for the better part of a decade. From now on, I plan to rei...",
+      "author": {
+        "name": "Sarthak Kamra",
+        "avatar": "https://bit.ly/dan-abramov"
+      },
+      "views": "1.4k views",
+      "image": "URL_to_image"
+    }
+  ]
+  
