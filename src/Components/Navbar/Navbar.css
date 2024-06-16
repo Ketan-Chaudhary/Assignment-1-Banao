@@ -1,5 +1,6 @@
 .nav-wrapper {
-    height: 72px;
+    max-height: 72px;
+    padding-top: 16px;
 }
 
 .nav-container {
@@ -9,6 +10,10 @@
 }
 
 /* Left */
+.nav-left {
+    margin-left: 80px;
+}
+
 .nav-left>img {
     width: 150px;
     height: 22px;
@@ -26,6 +31,7 @@
     border-radius: 21px;
 }
 
+
 .nav-search>button {
     border: none;
     cursor: pointer;
@@ -41,6 +47,10 @@
     background: none;
 }
 
+.search-input::placeholder {
+    font-size: 12px;
+}
+
 /* Right */
 
 .nav-right {
@@ -48,6 +58,6 @@
     margin-right: 96px;
 }
 
-.nav-right>span {
+.nav-right>span:nth-child(2) {
     color: #2F6CE5;
 }
