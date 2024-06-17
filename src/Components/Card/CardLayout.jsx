@@ -26,7 +26,7 @@ const CardLayout = ({ card }) => {
         border: "1px solid #E2E8F0",
       }}
     >
-      <CardBody w="43rem" p={0}>
+      <CardBody className=" w-[360px]  sm:w-[43rem]  " p={0}>
         <Image
           src="card.png"
           alt="card image"
@@ -75,19 +75,23 @@ const CardLayout = ({ card }) => {
       <CardFooter>
         <HStack className="flex flex-wrap justify-between w-full">
           <HStack>
-            <Avatar name={card.author.name} src={card.author.avatar} />
-            <Text
-              style={{
-                fontWeight: "semibold",
-                fontSize: "18px",
-              }}
-            >
-              {" "}
-              {card.author.name}{" "}
-            </Text>
+            <HStack>
+              <Avatar name={card.author.name} src={card.author.avatar} />
+              <Text
+                className="lg:text-[18px]"
+                style={{
+                  fontWeight: "semibold",
+                  fontSize: "14px",
+                }}
+              >
+                {" "}
+                {card.author.name}{" "}
+              </Text>
+            </HStack>
           </HStack>
           <HStack gap="2.5rem">
             <Text
+              className="hidden lg:block"
               style={{
                 fontSize: "14px",
                 color: "#525252",
